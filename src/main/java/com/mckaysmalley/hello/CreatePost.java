@@ -38,8 +38,10 @@ public class CreatePost extends HttpServlet {
         String text = request.getParameter("text");
         String username = request.getParameter("username");
         
+        String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+        
         Post newPost = new Post(username, text);
-        FilePostHandler handler = new FilePostHandler("test2.txt");
+        FilePostHandler handler = new FilePostHandler(dataDirectory + "/thread.txt");
         handler.addPost(newPost);
         
         response.sendRedirect("ShowThread");

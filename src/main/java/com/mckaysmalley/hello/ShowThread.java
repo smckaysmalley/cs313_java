@@ -34,7 +34,9 @@ public class ShowThread extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        PostDataHandler handler = new FilePostHandler("test2.txt");
+        String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+        
+        PostDataHandler handler = new FilePostHandler(dataDirectory + "/thread.txt");
         request.setAttribute("posts", handler.getPosts());
         
         request.getRequestDispatcher("postList.jsp").forward(request, response);
