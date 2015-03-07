@@ -16,6 +16,11 @@
         
         <h1>Enter a new post:</h1>
         
+        <%
+            String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+            System.out.println(dataDirectory);
+            %>
+        
         <form method="POST" action="CreatePost">
             Post: <input type="text" name="text" autofocus/><br />
             <input type="hidden" name="username" value="${username}" />

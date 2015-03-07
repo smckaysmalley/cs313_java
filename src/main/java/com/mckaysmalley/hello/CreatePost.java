@@ -41,7 +41,7 @@ public class CreatePost extends HttpServlet {
         String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
         
         Post newPost = new Post(username, text);
-        FilePostHandler handler = new FilePostHandler(dataDirectory + "/thread.txt");
+        FilePostHandler handler = new FilePostHandler(dataDirectory + "thread.txt");
         handler.addPost(newPost);
         
         response.sendRedirect("ShowThread");
@@ -88,3 +88,4 @@ public class CreatePost extends HttpServlet {
     }// </editor-fold>
 
 }
+    
