@@ -18,7 +18,7 @@
         
         <%
             String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-            System.out.println(dataDirectory);
+            System.out.println("<h1>"+dataDirectory+"</h1>");
             %>
         
         <form method="POST" action="CreatePost">
