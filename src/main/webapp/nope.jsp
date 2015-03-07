@@ -28,6 +28,6 @@
             NOPE NOPE NOPE NOPE NOPE NOPE NOPE NOPE NOPE NOPE NOPE NOPE NOPE            
         </h1>
         <h2>The username and/or password is incorrect</h2>
-        <a href="/cs313_java">Login</a>
+        <a href="index.html">Login</a>
     </body>
 </html>
