@@ -33,7 +33,7 @@ public class lougout extends HttpServlet {
             throws ServletException, IOException {
         
         request.getSession().invalidate();
-        response.sendRedirect("/cs313_java");
+        response.sendRedirect("/");
         return;
         
     }
